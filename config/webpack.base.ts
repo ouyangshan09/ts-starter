@@ -3,8 +3,7 @@
  * webpack 配置文件
  * @author Ouyang
  */
-import webpack, { Configuration } from 'webpack';
-import webpackMerge from 'webpack-merge';
+import { Configuration } from 'webpack';
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
@@ -39,8 +38,8 @@ const config: Configuration = {
     plugins: [
         new HtmlWebpackPlugin({
             template: path.join(_root, 'src', 'index.html'),
-            title: '黑铁之堡',
-            favicon: './favicon.ico'
+            title: '黑铁之堡'
+            // favicon: './favicon.ico'
             // inject: true,
             // minify: {
             //     removeComments: true,
