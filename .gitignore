@@ -1,0 +1,11 @@
+/.settings/
+/.project
+/node_modules/
+/.idea/
+/debug.log
+/libs
+/dist
+/oylab.rar
+/tools
+/npm-debug.log
+/package-lock.json
