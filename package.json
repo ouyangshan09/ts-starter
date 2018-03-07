@@ -19,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/ouyangshan09/ts-starter/issues"
   },
-  "homepage": "https://github.com/ouyangshan09/ts-starter#readme"
+  "homepage": "https://github.com/ouyangshan09/ts-starter#readme",
+  "dependencies": {
+    "html-webpack-plugin": "^3.0.6",
+    "webpack": "^4.1.0",
+    "webpack-merge": "^4.1.2"
+  }
 }
