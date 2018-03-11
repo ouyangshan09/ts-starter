@@ -4,16 +4,16 @@
  * @author Ouyang
  */
 import { Configuration } from 'webpack';
-import path from 'path';
+import Path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import Config from './config';
 
-const _root = path.resolve(__dirname, '../');
 
 const config: Configuration = {
-    context: _root,
+    context: Config.root,
 
     entry: {
-        app: [path.join(_root, 'src', 'index.ts')]
+        app: [Path.join(Config.dir_src, 'index.ts')]
     },
 
     resolve: {
@@ -37,7 +37,7 @@ const config: Configuration = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.join(_root, 'src', 'index.html'),
+            template: Path.join(Config.dir_src, 'index.html'),
             title: '黑铁之堡'
             // favicon: './favicon.ico'
             // inject: true,
