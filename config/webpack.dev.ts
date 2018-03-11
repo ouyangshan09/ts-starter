@@ -6,8 +6,6 @@
 import baseConfig from './webpack.base';
 import { Configuration } from 'webpack';
 import webpackMerge from 'webpack-merge';
-// import url from 'url';
-// import fs from 'fs';
 
 const devConfig: Configuration = webpackMerge(baseConfig, {
     output: {

@@ -4,7 +4,6 @@
  */
 import Webpack from 'webpack';
 import WebpackServer, { Configuration } from 'webpack-dev-server';
-import url from 'url';
 import webpackDevConfig from './webpack.dev';
 
 const compiler = Webpack(webpackDevConfig);
