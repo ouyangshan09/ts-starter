@@ -6,6 +6,7 @@
 import { Configuration } from 'webpack';
 import Path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ExtractTextWebpackPlugin from 'extract-text-webpack-plugin';
 import Config from './config';
 
 
@@ -31,6 +32,24 @@ const config: Configuration = {
                         'presets': ['env']
                     }
                 }]
+            },
+            {
+                test: /\.s?(c|a)ss$/,
+                use: [{
+                    loader: 'style-loader'
+                }, {
+                    loader: 'css-loader'
+                }, {
+                    loader: 'sass-loader'
+                }]
+                // use: ExtractTextWebpackPlugin.extract({
+                //     use: [{
+                //         loader: 'css-loader'
+                //     }, {
+                //         loader: 'sass-loader'
+                //     }],
+                //     fallback: 'style-loader'
+                // })
             }
         ]
     },
