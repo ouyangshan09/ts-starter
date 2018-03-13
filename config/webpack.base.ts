@@ -6,7 +6,6 @@
 import { Configuration } from 'webpack';
 import Path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import ExtractTextWebpackPlugin from 'extract-text-webpack-plugin';
 import Config from './config';
 
 
@@ -42,14 +41,6 @@ const config: Configuration = {
                 }, {
                     loader: 'sass-loader'
                 }]
-                // use: ExtractTextWebpackPlugin.extract({
-                //     use: [{
-                //         loader: 'css-loader'
-                //     }, {
-                //         loader: 'sass-loader'
-                //     }],
-                //     fallback: 'style-loader'
-                // })
             }
         ]
     },
@@ -57,7 +48,7 @@ const config: Configuration = {
     plugins: [
         new HtmlWebpackPlugin({
             template: Path.join(Config.dir_src, 'index.html'),
-            title: '黑铁之堡'
+            title: '基础环境'
             // favicon: './favicon.ico'
             // inject: true,
             // minify: {
